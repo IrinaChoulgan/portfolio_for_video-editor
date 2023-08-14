@@ -1,25 +1,48 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 
 import { AppWrapp } from '../../wrapper';
-import { urlFor, client } from '../../client';
 import style from './Work.module.css';
 import s from '../../App.module.css';
+
+import photo1 from '../../assets/about01.webp'
+import photo2 from '../../assets/about02.jpg'
+import photo3 from '../../assets/about03.jpeg'
+
+
+const projects = [
+  {
+    name: 'video-1',
+    link: '/',
+    description: 'Video description',
+    imgUrl: {photo1},
+    tags: 'React JS'
+  },
+  {
+    name: 'video-2',
+    link: '/',
+    description: 'Video description',
+    imgUrl: {photo2},
+    tags: 'Web App'
+
+  },
+  {
+    name: 'video-3',
+    link: '/',
+    description: 'Video description',
+    imgUrl: {photo3},
+    tags: 'UI/UX'
+
+  }
+]
 
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
-  const [works, setWorks] = useState([]);
-  const [filterWork, setFilterWork] = useState([]);
+  const [works, setWorks] = useState(projects);
+  const [filterWork, setFilterWork] = useState(projects);
 
-  useEffect(() => {
-    const query = '*[_type == "works"]';
-    client.fetch(query).then((data) => {
-      setWorks(data);
-      setFilterWork(data);
-    });
-  }, []);
 
   const handleWorkFilter = (item) => {
     setActiveFilter(item);
@@ -61,7 +84,7 @@ const Work = () => {
         {filterWork.map((work, index) => (
           <div className={`${style.app__work_item} ${s.app__flex}`} key={index}>
             <div className={`${style.app__work_img} ${s.app__flex}`}>
-              <img src={urlFor(work.imgUrl)} alt={work.name} />
+              <img src={work.imgUrl} alt={work.name} />
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
                 transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
@@ -97,7 +120,7 @@ const Work = () => {
               </p>
 
               <div className={`${style.app__work_tag} ${s.app__flex}`}>
-                <p className={s.p_texts}>{work.tags[0]}</p>
+                <p className={s.p_texts}>{work.tags}</p>
               </div>
             </div>
           </div>
