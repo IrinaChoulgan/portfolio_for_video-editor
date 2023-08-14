@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Montserrat&family=Open+Sans:wght@400;600&family=Space+Grotesk:wght@400;500&family=Titillium+Web:wght@400;600;700&family=ZCOOL+XiaoWei&display=swap");
+
+:root {
+  --font-base: 'Titillium Web', sans-serif;
+
+  --primary-color: #edf2f8;
+  --secondary-color: #313bac;
+  --black-color: #030303;
+  --lightGray-color: #e4e4e4;
+  --gray-color: #6b7688;
+  --brown-color: #46364a;
+  --white-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  /* background-color: #030303; */
+}
