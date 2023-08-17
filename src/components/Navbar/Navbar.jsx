@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 
-import { images } from '../../constants';
 import style from './Navbar.module.css';
 import s from '../../App.module.css';
+import LanguagesBtn from '../LanguagesBtn/LanguagesBtn';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -23,6 +23,8 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
+
+      <LanguagesBtn/>
 
       <div className={style.app__navbar_menu}>
         <HiMenuAlt4 className={style.app__navbar_svg} onClick={() => setToggle(true)} />
@@ -45,7 +47,9 @@ const Navbar = () => {
           </motion.div>
         )}
       </div>
+
     </nav>
+
   );
 };
 

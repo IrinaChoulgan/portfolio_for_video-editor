@@ -1,0 +1,24 @@
+.btn_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    padding: 0.1rem;
+    border-radius: 0.5rem;
+}
+
+.btn:nth-child(1) {
+    margin-right: 10px;
+}
