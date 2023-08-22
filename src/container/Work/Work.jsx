@@ -10,7 +10,6 @@ import { projects } from './Projects';
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
-  const [works, setWorks] = useState(projects);
   const [filterWork, setFilterWork] = useState(projects);
 
 
@@ -22,9 +21,9 @@ const Work = () => {
       setAnimateCard([{ y: 0, opacity: 1 }]);
 
       if (item === 'All') {
-        setFilterWork(works);
+        setFilterWork(projects);
       } else {
-        setFilterWork(works.filter((work) => work.tags.includes(item)));
+        setFilterWork(projects.filter((work) => work.tags.includes(item)));
       }
     }, 500);
   };
