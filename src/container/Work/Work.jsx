@@ -30,8 +30,8 @@ const Work = () => {
   };
   return (
     <>
-      <h2 className={s.head_text}>
-        My Creative Portfolio
+      <h2 className={style.head_text}>
+        <span>My</span> <span> Creative</span> <span> Portfolio</span>
       </h2>
       <div className={style.app__work_filter}>
         {['Ads and promos', 'Animated Logos', 'Corporate videos','Motion graphics', 'Social videos', 'All'].map((item, index) => (
@@ -70,7 +70,7 @@ const Work = () => {
               </p>
 
               <div className={`${style.app__work_tag} ${s.app__flex}`}>
-                <p className={s.p_texts}>{work.tags}</p>
+                <h5 className={s.p_text}>{work.tags}</h5>
               </div>
             </div>
           </div>

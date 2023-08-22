@@ -41,17 +41,20 @@
   align-items: center;
   justify-content: space-around;
   z-index: 2;
+  background-color: transparent;
 }
 
 .header_title {
   font-size: 6em;
   animation-name: fade;
   animation-duration: 4s;
+  background-color: transparent;
 }
 
 .header_title_text {
   justify-content: flex-end;
   font-size: 2em;
+  background-color: transparent;
 }
 
 
