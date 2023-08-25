@@ -8,10 +8,11 @@ import s from '../../App.module.css';
 import { projects } from './Projects';
 
 const Work = () => {
-  const [activeFilter, setActiveFilter] = useState('All');
+  const [activeFilter, setActiveFilter] = useState('Motion templates');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [filterWork, setFilterWork] = useState(projects);
 
+  // const newProject = projects.filter((project=> project.tags==='Motion templates'))
 
   const handleWorkFilter = (item) => {
     setActiveFilter(item);
@@ -30,10 +31,10 @@ const Work = () => {
   return (
     <>
       <h2 className={style.head_text}>
-        <span>My</span> <span> Creative</span> <span> Portfolio</span>
+         My Creative Portfolio
       </h2>
       <div className={style.app__work_filter}>
-        {['Ads and promos', 'Animated Logos', 'Corporate videos','Motion graphics', 'Social videos', 'All'].map((item, index) => (
+        {['Motion templates','Ads and promos', 'Animated Logos', 'Corporate videos','Motion graphics', 'Social videos', 'All'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
@@ -64,9 +65,6 @@ const Work = () => {
 
             <div className={`${style.app__work_content} ${s.app__flex}`}>
               <h4 className={s.bold_text}>{work.title}</h4>
-              <p className={s.p_text} style={{ marginTop: 10 }}>
-                {work.description}
-              </p>
 
               <div className={`${style.app__work_tag} ${s.app__flex}`}>
                 <h5 className={s.p_text}>{work.tags}</h5>

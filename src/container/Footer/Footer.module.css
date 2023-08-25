@@ -24,8 +24,8 @@
   padding: 1rem;
   border-radius: 10px;
   cursor: pointer;
-  background-color: #B8BAB9;
-
+  background-color: #183b46;
+  
   transition: all 0.3s ease-in-out;
 }
 
@@ -41,10 +41,12 @@
 .app__footer_card a {
   text-decoration: none;
   font-weight: 500;
+  color: white;
+  font-weight: 700;
 }
 
 .app__footer_card:hover {
-  box-shadow: 5px 5px 10px 5px #252525;
+  box-shadow: 5px 5px 10px 5px var(--secondary-color);
 }
 
 @media screen and (max-width: 768px) {

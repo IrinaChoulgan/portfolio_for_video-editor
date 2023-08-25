@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <nav className={style.app__navbar}>
       <a href="/" className={style.app__navbar_logo}>
-    LOGO     
+    PORTFOLIO    
      </a>
       <ul className={style.app__navbar_links}>
         {['home', 'about', 'work','contact'].map((item) => (

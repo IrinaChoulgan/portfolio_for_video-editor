@@ -267,7 +267,6 @@ export const projects = [
     {
       name: 'video-34',
       link: 'https://youtu.be/4RjS0VYJdzE',
-      description: 'Video description',
       imgUrl: `${images.p_34}`,
       tags: 'Social videos'
   
@@ -275,13 +274,92 @@ export const projects = [
     {
       name: 'video-35',
       link: 'https://youtu.be/3w3z4diaJZg',
-      description: 'Video description',
       imgUrl: `${images.p_35}`,
       tags: 'Social videos'
   
+    },
+    {
+      name: 'video-36',
+      link: 'https://youtu.be/xLjT6Ef4SPA',
+      imgUrl: `${images.p_36}`,
+      tags: 'Motion templates'
+  
+    },
+    {
+      name: 'video-37',
+      link: 'https://youtu.be/b-9BkSdX9xg',
+      imgUrl: `${images.p_37}`,
+      tags: 'Motion templates'
+  
+    },
+    {
+      name: 'video-38',
+      link: 'https://youtu.be/S-1_hw7jOGU',
+      imgUrl: `${images.p_38}`,
+      tags: 'Motion templates'
+  
+    },
+    {
+      name: 'video-39',
+      link: 'https://youtu.be/sr7brqu0t50',
+      imgUrl: `${images.p_39}`,
+      tags: 'Motion templates'
+  
+    },
+    {
+      name: 'video-40',
+      link: 'https://youtu.be/hrFX8WRmv2g',
+      imgUrl: `${images.p_40}`,
+      tags: 'Motion templates'
+  
+    },
+    {
+      name: 'video-41',
+      link: 'https://youtu.be/EKxCbnVq4Ig',
+      imgUrl: `${images.p_41}`,
+      tags: 'Motion templates'
+  
+    },
+    {
+      name: 'video-42',
+      link: 'https://youtu.be/nkcfqsiU3LQ',
+      imgUrl: `${images.p_42}`,
+      tags: 'Motion templates'
+  
+    },
+    {
+      name: 'video-43',
+      link: 'https://youtu.be/i29_emwmM3Q',
+      imgUrl: `${images.p_43}`,
+      tags: 'Motion templates'
+  
+    },
+    {
+      name: 'video-44',
+      link: 'https://youtu.be/SOXJiJtAQvk',
+      imgUrl: `${images.p_44}`,
+      tags: 'Motion templates'
+  
+    },
+    {
+      name: 'video-45',
+      link: 'https://youtu.be/--d3ZiIzFSE',
+      imgUrl: `${images.p_45}`,
+      tags: 'Motion templates'
+  
+    },
+    {
+      name: 'video-46',
+      link: 'https://youtu.be/uu8TDV7EeIM',
+      imgUrl: `${images.p_46}`,
+      tags: 'Motion templates'
+  
     }
   ]
-
+  
+  
+  
+ 
 
 
 

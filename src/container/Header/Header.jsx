@@ -8,14 +8,9 @@ import { images } from '../../constants';
 const Header = () => {
   return (
    <div className={s.header}>
-    <video className={s.header_video} src={images.video} autoPlay muted loop></video>
-    <div className={s.header_video_overlay}></div>
-
-    <div className={s.header_text}>
-      <h1 className={s.header_title}>Hello!!!!</h1>
-      <p className={s.header_title_text}>Text</p>
-    </div>
-
+    <img className={s.header_video} src={images.hero} alt=""/>
+    <div className={s.header_video_overlay}/>
+    <h2 className={s.header_title}>Welcome to my Portfolio</h2>
    </div>
   );
 };

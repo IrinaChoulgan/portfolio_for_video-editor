@@ -13,19 +13,10 @@ const Footer = () => {
       <div className={style.app__footer_cards}>
         <div className={style.app__footer_card}>
           <img src={images.email} alt="email" />
-          <a href="mailto:hello@micael.com" className={s.p_text}>
-             Your mail          
+          <a href="mailto:wegmannpreuss@icloud.com" className={s.p_text}>
+            wegmannpreuss@icloud.com         
           </a>
         </div>
-        <div className={style.app__footer_card}>
-          {/* <img src={images.mobile} alt="phone" />
-          <a href="tel:+1 (123) 456-7890" className={s.p_text}>
-            +38 (050) 1082231
-          </a> */}
-
-          Your contact
-        </div>
-
         <div className={s.copyright}>
             <p className={`${s.p_text} ${s.copyright_text}`}>2023 All rights reserved</p>
           </div>
