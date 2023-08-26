@@ -28,7 +28,7 @@
 
 .app__header_cards {
   padding: 2rem 2rem;
-  background-color: #183b46;
+  background-color: var(--card-color);
   border-radius: 15px;
   flex-direction: row;
   width: auto;

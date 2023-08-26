@@ -1,7 +1,7 @@
 .app__navbar {
   width: 100%;
-padding: 20px;  
-display: flex;
+  padding: 20px;  
+  display: flex;
   justify-content: space-between;
   align-items: center;
   backdrop-filter: blur(15px);
@@ -18,7 +18,7 @@ display: flex;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  color: white;
+  color: var(--white-color);
   font-weight: 800;
 }
 
@@ -32,7 +32,7 @@ display: flex;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: var(--white-color);
   font-weight: 600;
 }
 
@@ -57,7 +57,7 @@ display: flex;
 .app__navbar_link {
   text-decoration: none;
   flex-direction: column;
-  color:white;
+  color: var(--white-color);
 
   text-transform: uppercase;
   font-weight: 500;
@@ -123,7 +123,7 @@ display: flex;
   padding: 0;
   height: 100%;
   width: 100%;
-  color:white;
+  color: var(--white-color);
 
 
   display: flex;

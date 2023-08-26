@@ -1,15 +1,19 @@
 import React from 'react';
 import s from '../App.module.css';
+import { useTranslation } from 'react-i18next';
 
 const NavigationDots = ({ active }) => {
+  const { t } = useTranslation();
+  const menu = t('navigation_menu', { returnObjects: true });
+
   return (
     <div className={s.app__navigation}>
-      {['home', 'about', 'work', 'contact'].map((item, index) => (
+      {menu.map((item, index) => (
         <a
-          href={`#${item}`}
-          key={item + index}
+          href={`#${item.title}`}
+          key={index}
           className={s.app__navigation_dot}
-          style={active === item ? { backround: '#0EAD19' } : {}}
+          style={active === item.title ? { backround: '#0EAD19' } : {}}
         />
       ))}
     </div>
