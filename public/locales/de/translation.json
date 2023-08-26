@@ -1,4 +1,39 @@
 {
     "text": "Hello!",
-    "about": "17 Jahre Erfahrung in der Videobearbeitung. Durch eine umfangreiche Karriere in der Ukraine habe ich vielfältige Fähigkeiten und tiefe Kenntnisse in der Filmproduktion erworben. Ich bin in der Lage, schnell zu lernen, mich an neue Rollen anzupassen und meine Fähigkeiten zu erweitern. Meine starke Kommunikation, meine Motivation und mein proaktiver Ansatz treiben meine Arbeit voran. Erfahrener Film - und Videoeditor mit nachweislicher Erfahrung bei der Umsetzung von Kundenvisionen während des gesamten Filmprozesses. Erledigung mehrerer Aufgaben bei gleichzeitiger Bereitstellung von erstklassigem Service, Qualität und Kreativität. Kompetent in der Bearbeitung von Werbespots, Sonderveranstaltungen und kundenspezifischen Kundenprojekten. Gute Fähigkeiten im Bereich Motion Graphics. Kreativität und gutes Verständnis aller Prozesse"
+    "about": "17 Jahre Erfahrung in der Videobearbeitung. Durch eine umfangreiche Karriere in der Ukraine habe ich vielfältige Fähigkeiten und tiefe Kenntnisse in der Filmproduktion erworben. Ich bin in der Lage, schnell zu lernen, mich an neue Rollen anzupassen und meine Fähigkeiten zu erweitern. Meine starke Kommunikation, meine Motivation und mein proaktiver Ansatz treiben meine Arbeit voran. Erfahrener Film - und Videoeditor mit nachweislicher Erfahrung bei der Umsetzung von Kundenvisionen während des gesamten Filmprozesses. Erledigung mehrerer Aufgaben bei gleichzeitiger Bereitstellung von erstklassigem Service, Qualität und Kreativität. Kompetent in der Bearbeitung von Werbespots, Sonderveranstaltungen und kundenspezifischen Kundenprojekten. Gute Fähigkeiten im Bereich Motion Graphics. Kreativität und gutes Verständnis aller Prozesse",
+    "navigation_menu": [
+        {
+            "title": "Startseite"
+          },
+          {
+            "title": "Über mich"
+          },
+          {
+            "title": "Meine Werke"
+          },
+          {
+            "title": "Kontakt"
+          }
+    ],
+    "about_title": "Über mich",
+    "about_information": [
+        {
+        "id": "1",
+        "title": "Erfahrung",
+        "text": "17+ Jahre arbeiten"
+      },
+      {
+        "id": "2",
+        "title": "Kunden",
+        "text": "1000+ Zufriedene Kunden"
+      },
+      {
+        "id": "3",
+        "title": "Projekte",
+        "text": "300+ Engagiert"
+      }
+      ],
+      "work_title": "Mein kreatives Portfolio",
+      "footer": "Du kannst mich kontaktieren",
+      "copyright": "Alle Rechte vorbehalten"
 }

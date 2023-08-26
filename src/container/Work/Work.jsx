@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 import { AppWrapp } from '../../wrapper';
 import style from './Work.module.css';
@@ -12,8 +13,12 @@ const Work = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [filterWork, setFilterWork] = useState(projects);
 
-  // const newProject = projects.filter((project=> project.tags==='Motion templates'))
+  const { t } = useTranslation();
 
+
+  useEffect(() => {
+    setFilterWork(projects.filter((project) => project.tags === 'Motion templates'));
+  }, []);
   const handleWorkFilter = (item) => {
     setActiveFilter(item);
     setAnimateCard([{ y: 100, opacity: 0 }]);
@@ -23,7 +28,9 @@ const Work = () => {
 
       if (item === 'All') {
         setFilterWork(projects);
-      } else {
+      } else if (item === 'Motion templates') {
+        setFilterWork(projects.filter((project) => project.tags === 'Motion templates'))}
+        else {
         setFilterWork(projects.filter((work) => work.tags.includes(item)));
       }
     }, 500);
@@ -31,7 +38,7 @@ const Work = () => {
   return (
     <>
       <h2 className={style.head_text}>
-         My Creative Portfolio
+      {t('work_title')}
       </h2>
       <div className={style.app__work_filter}>
         {['Motion templates','Ads and promos', 'Animated Logos', 'Corporate videos','Motion graphics', 'Social videos', 'All'].map((item, index) => (

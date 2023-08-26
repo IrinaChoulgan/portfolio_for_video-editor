@@ -84,6 +84,7 @@ display: flex;
   width: 70%;
   height: 70%;
   background-color: transparent;
+  color: var(--white-color)
 }
 .app__navbar_menu div {
   position: fixed;
@@ -105,6 +106,8 @@ display: flex;
   background-repeat: repeat;
 
   box-shadow: 0 0 20px rgba(240, 238, 238, 0.15);
+  background-image: linear-gradient(rgba(0,0,0,1) 30%, rgba(0,69,83,1) 100%);
+
 }
 
 .app__navbar_close {
@@ -134,7 +137,7 @@ display: flex;
 }
 
 .app__navbar_menu_link {
-  color: var(--gray-color);
+  color: var(--white-color);
   text-decoration: none;
   font-size: 1rem;
   text-transform: uppercase;
