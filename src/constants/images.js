@@ -57,8 +57,10 @@ import p_44 from '../assets/p_44.png'
 import p_45 from '../assets/p_45.png'
 import p_46 from '../assets/p_46.png'
 
-
-
+import r_1 from '../assets/review-1.png'
+import r_2_1 from '../assets/review-2.1.png'
+import r_2_2 from '../assets/review-2.2.png'
+import r_3 from '../assets/review-3.png'
 
 export default {
   email, linkedIn, hero, usa, germany,
@@ -67,5 +69,6 @@ export default {
   p_14,p_15,p_16,p_17,p_18,p_19,
   p_20,p_21,p_22,p_23,p_24,p_25,p_26,p_27,p_28,
   p_29,p_30,p_31,p_32,p_33,p_34,p_35,
-  p_36, p_37, p_38, p_39, p_40, p_41, p_42, p_43, p_44, p_45, p_46
+  p_36, p_37, p_38, p_39, p_40, p_41, p_42, p_43, p_44, p_45, p_46,
+  r_1,r_2_1, r_2_2, r_3
 };

@@ -1,0 +1,48 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1200;
+  }
+  
+  .modal {
+   background-color: var(--card-color);
+   padding: 30px;
+   border-radius: 0.5rem;
+}
+
+.img {
+    width: 500px;
+}
+
+@media screen and (max-width: 600px) {
+    .img {
+      width: 280px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 800px) {
+    .img {
+      width: 400px;
+    }
+  }
+
+.btn {
+    display: flex;
+    border: 0px;
+    padding: 5px;
+    cursor: pointer;
+
+    border: 1px solid var(--white-color);
+    border-radius: 0.5rem;
+    font-size: 16px;
+    color: var(--white-color);
+    background-color: transparent;
+
+    margin-top: 5px;
+}

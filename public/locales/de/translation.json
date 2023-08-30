@@ -15,9 +15,13 @@
           },
           {
             "title": "Kontakt"
+          },
+          {
+            "title": "Bewertungen/Empfehlungen"
           }
     ],
     "about_title": "Über mich",
+    "reviews_title": "Bewertungen und Empfehlungen",
     "about_information": [
         {
         "id": "1",

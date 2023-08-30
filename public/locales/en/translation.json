@@ -15,9 +15,13 @@
           },
           {
             "title": "contact"
+          },
+          {
+            "title": "reviews/recommendation"
           }
     ],
     "about_title": "About",
+    "reviews_title": "Reviews and Recommendation",
     "about_information": [
         {
         "id": "1",
