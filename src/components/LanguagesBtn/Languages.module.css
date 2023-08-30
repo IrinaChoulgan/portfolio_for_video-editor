@@ -31,3 +31,9 @@
 .btn:nth-child(1) {
     margin-right: 10px;
 }
+
+@media screen and (min-width: 769px) {
+    .btn_container {
+        margin-left: 70px;
+    }
+  }

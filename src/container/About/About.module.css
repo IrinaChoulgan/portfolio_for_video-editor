@@ -45,6 +45,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  color: var(--white-color)
 }
 
 .app__profiles {
@@ -82,7 +84,7 @@
 
 }
 
-@media screen and (max-width: 368px) {
+@media screen and (max-width: 760px) {
   .app__header_wrapper {
     display: flex;
     align-items: center;

@@ -14,9 +14,13 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <nav className={style.app__navbar}>
+    
       <a href="/" className={style.app__navbar_logo}>
     PORTFOLIO    
      </a>
+     
+     <LanguagesBtn />
+
       <ul className={style.app__navbar_links}>
         {menu.map((item,index ) => (
           <li className={`${s.app__flex} ${s.p_text}`} key={index}>
@@ -28,7 +32,6 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <LanguagesBtn/>
 
       <div className={style.app__navbar_menu}>
         <HiMenuAlt4 className={style.app__navbar_svg} onClick={() => setToggle(true)} />

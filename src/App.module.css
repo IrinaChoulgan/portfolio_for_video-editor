@@ -1,7 +1,5 @@
 .app {
-  font-family: var(--font-base);
-  background-image: linear-gradient(rgba(0,0,0,1) 30%, rgba(0,69,83,1) 100%);
-
+  font-family: var(--font-base);  background-image: linear-gradient(rgba(0,0,0,1) 30%, rgba(0,69,83,1) 100%);
 }
 
 .app__container {

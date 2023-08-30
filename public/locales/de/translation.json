@@ -1,5 +1,6 @@
 {
-    "title": "Willkommen in meinem Portfolio",
+    "title": "Hallo! Ich bin Freiberufler",
+    "title2": "Videobearbeitung / Motion-Graphics-Designer",
     "text": "Hello!",
     "about": "17 Jahre Erfahrung in der Videobearbeitung. Durch eine umfangreiche Karriere in der Ukraine habe ich vielfältige Fähigkeiten und tiefe Kenntnisse in der Filmproduktion erworben. Ich bin in der Lage, schnell zu lernen, mich an neue Rollen anzupassen und meine Fähigkeiten zu erweitern. Meine starke Kommunikation, meine Motivation und mein proaktiver Ansatz treiben meine Arbeit voran. Erfahrener Film - und Videoeditor mit nachweislicher Erfahrung bei der Umsetzung von Kundenvisionen während des gesamten Filmprozesses. Erledigung mehrerer Aufgaben bei gleichzeitiger Bereitstellung von erstklassigem Service, Qualität und Kreativität. Kompetent in der Bearbeitung von Werbespots, Sonderveranstaltungen und kundenspezifischen Kundenprojekten. Gute Fähigkeiten im Bereich Motion Graphics. Kreativität und gutes Verständnis aller Prozesse",
     "navigation_menu": [
@@ -26,12 +27,12 @@
       {
         "id": "2",
         "title": "Kunden",
-        "text": "1000+ Zufriedene Kunden"
+        "text": "Viele zufriedene Kunden ;)"
       },
       {
         "id": "3",
         "title": "Projekte",
-        "text": "300+ Engagiert"
+        "text": "Mehr als 1000 abgeschlossene Projekte"
       }
       ],
       "work_title": "Mein kreatives Portfolio",
