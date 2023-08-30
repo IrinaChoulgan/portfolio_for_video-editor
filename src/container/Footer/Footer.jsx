@@ -22,7 +22,7 @@ const Footer = () => {
         </div>
         <div className={style.app__footer_card}>
           <img src={images.linkedIn} alt="LinkedIn" />
-          <a href="https://www.linkedin.com/in/dima-tsybulkin-57820a9a" className={s.p_text}>
+          <a href="https://www.linkedin.com/in/dima-tsybulkin-57820a9a" className={s.p_text} target="_blank" rel="noreferrer">
              My LinkedIn          
           </a>
         </div>
