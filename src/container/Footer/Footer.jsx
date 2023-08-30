@@ -20,6 +20,12 @@ const Footer = () => {
             wegmannpreuss@icloud.com         
           </a>
         </div>
+        <div className={style.app__footer_card}>
+          <img src={images.linkedIn} alt="LinkedIn" />
+          <a href="https://www.linkedin.com/in/dima-tsybulkin-57820a9a" className={s.p_text}>
+             My LinkedIn          
+          </a>
+        </div>
         <div className={s.copyright}>
             <p className={`${s.p_text} ${s.copyright_text}`}>2023 {t('copyright')}</p>
           </div>

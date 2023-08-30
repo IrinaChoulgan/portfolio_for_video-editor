@@ -1,5 +1,5 @@
 import email from '../assets/email.png';
-import mobile from '../assets/mobile.png';
+import linkedIn from '../assets/linkedin.png';
 
 import hero from '../assets/hero.jpg'
 import usa from '../assets/united-states-of-america.png'
@@ -61,7 +61,7 @@ import p_46 from '../assets/p_46.png'
 
 
 export default {
-  email, mobile, hero, usa, germany,
+  email, linkedIn, hero, usa, germany,
   p_1, p_2, p_3, p_4, p_5, p_6, p_7,p_8,
   p_9, p_10, p_11, p_12, p_13,
   p_14,p_15,p_16,p_17,p_18,p_19,
