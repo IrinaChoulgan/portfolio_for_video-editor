@@ -1,1 +1,1 @@
-# my_portfolio  This is my Portfolio! Welcome)
+# my_portfolio  Portfolio for a video editor!
