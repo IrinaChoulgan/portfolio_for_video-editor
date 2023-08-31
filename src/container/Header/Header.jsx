@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { AppWrapp } from '../../wrapper';
-import s from './Header.module.css'
-
-import { images } from '../../constants';
 import { useTranslation } from 'react-i18next';
 
+import { images } from '../../constants';
+
+import s from './Header.module.css'
 
 const Header = () => {
   const {t} = useTranslation()
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const menu = t('navigation_menu', { returnObjects: true });
+  const menuItem = menu[0].title
+  
   const handleScroll = () => {
     if (window.scrollY > 0) {
       setIsScrolled(true);
@@ -26,7 +28,7 @@ const Header = () => {
   }, []);
 
   return (
-   <div className={s.header}>
+   <div className={s.header} id={menuItem}>
     <img className={s.header_video} src={images.hero} alt=""/>
     <div className={s.header_video_overlay}/>
     <div className={s.title_wrapper}>
@@ -37,4 +39,4 @@ const Header = () => {
   );
 };
 
-export default AppWrapp(Header, 'home');
+export default Header;

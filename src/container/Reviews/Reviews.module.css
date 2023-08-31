@@ -35,10 +35,6 @@
   fill: var(--secondary-color)
 }
 
-.filters {
-  justify-content: center;
-}
-
 .img {
     width: 500px;
 }

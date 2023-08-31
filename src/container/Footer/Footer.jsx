@@ -2,15 +2,17 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { images } from '../../constants';
-import { AppWrapp } from '../../wrapper';
 import s from '../../App.module.css';
 import style from './Footer.module.css';
 
 const Footer = () => {
   const { t } = useTranslation();
 
+  const menu = t('navigation_menu', { returnObjects: true });
+  const menuItem = menu[3].title
+
   return (
-    <>
+    <footer id={menuItem}>
       <h2 className={s.head_text}> {t('footer')}</h2>
 
       <div className={style.app__footer_cards}>
@@ -30,8 +32,8 @@ const Footer = () => {
             <p className={`${s.p_text} ${s.copyright_text}`}>2023 {t('copyright')}</p>
           </div>
       </div>
-    </>
+    </footer>
   );
 };
 
-export default AppWrapp(Footer, 'contact');
+export default Footer;

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
-import { AppWrapp } from '../../wrapper';
 import style from './Work.module.css';
 import s from '../../App.module.css';
 
@@ -16,6 +15,9 @@ const Work = () => {
   const [filterWork, setFilterWork] = useState(projects);
 
   const { t } = useTranslation();
+
+  const menu = t('navigation_menu', { returnObjects: true });
+  const menuItem = menu[2].title
 
   useEffect(() => {
     setFilterWork(projects.filter((project) => project.tags === filters[0].title));
@@ -37,7 +39,7 @@ const Work = () => {
     }, 500);
   };
   return (
-    <>
+    <section id={menuItem}>
       <h2 className={style.head_text}>
       {t('work_title')}
       </h2>
@@ -81,8 +83,8 @@ const Work = () => {
           </div>
         ))}
       </motion.div>
-    </>
+    </section>
   );
 };
 
-export default AppWrapp(Work, 'work');
+export default Work;

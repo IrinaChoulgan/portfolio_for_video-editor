@@ -1,14 +1,12 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { AppWrapp } from '../../wrapper';
 import Modal from './Modal';
 
 import { reviews } from './Reviews.js'
 
 import style from '../Work/Work.module.css'
 import s from '../../App.module.css'
-import st from './Reviews.module.css'
 
 let bigURL = '';
 let bigOne = ''
@@ -18,6 +16,9 @@ const Reviews = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [filterWork, setFilterWork] = useState('');
   const [showModal, setShowModal] = useState(false);
+
+  const menu = t('navigation_menu', { returnObjects: true });
+  const menuItem = menu[4].title
 
   const handleReviewFilter = (item) => {
     setAnimateCard([{ y: 100, opacity: 0 }]);
@@ -47,11 +48,11 @@ const Reviews = () => {
   };
 
   return (
-    <div>
+    <div id={menuItem}>
        <h2 className={style.head_text}>
           {t('reviews_title')}
        </h2>
-       <div className={`${style.app__work_filter} ${st.filters}`}>
+       <div className={style.app__work_filter}>
         {['Recommendation','Review'].map((item, index) => (
           <div
             key={index}
@@ -98,4 +99,4 @@ const Reviews = () => {
   )
 }
 
-export default AppWrapp(Reviews, 'reviews')
+export default Reviews

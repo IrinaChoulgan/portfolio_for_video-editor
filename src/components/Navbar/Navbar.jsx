@@ -19,8 +19,6 @@ const Navbar = () => {
         PORTFOLIO    
      </a>
      
-     <LanguagesBtn />
-
       <ul className={style.app__navbar_links}>
         {menu.map((item,index ) => (
           <li className={`${s.app__flex} ${s.p_text}`} key={index}>
@@ -31,7 +29,8 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-
+      
+      <LanguagesBtn />
 
       <div className={style.app__navbar_menu}>
         <HiMenuAlt4 className={style.app__navbar_svg} onClick={() => setToggle(true)} />
