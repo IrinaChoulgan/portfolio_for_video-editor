@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import Modal from './Modal';
+import Modal from './Modal'
 
-import { reviews } from './Reviews.js'
+import { recommendation } from './Reviews.js'
 
 import style from '../Work/Work.module.css'
 import s from '../../App.module.css'
@@ -11,28 +10,20 @@ import s from '../../App.module.css'
 let bigURL = '';
 let bigOne = ''
 
-const Reviews = () => {
-  const { t } = useTranslation();
-  const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
-  const [filterWork, setFilterWork] = useState('');
-  const [showModal, setShowModal] = useState(false);
+const Recommendation = () => {
+    const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
+    const [filterWork, setFilterWork] = useState(''); 
+    const [showModal, setShowModal] = useState(false);
 
-  const menu = t('navigation_menu', { returnObjects: true });
-  const menuItem = menu[4].title
-
-  const handleReviewFilter = (item) => {
-    setAnimateCard([{ y: 100, opacity: 0 }]);
-
-    setTimeout(() => {
-      setAnimateCard([{ y: 0, opacity: 1 }]);
-
-       if (item === 'Recommendation') {
-        setFilterWork(reviews.filter((review) => review.tags === 'Recommendation'))}
-        else {
-        setFilterWork(reviews.filter((review) => review.tags.includes(item)));
-      }
-    }, 500);
-  };
+    const handleReviewFilter = (item) => {
+        setAnimateCard([{ y: 100, opacity: 0 }]);
+    
+        setTimeout(() => {
+          setAnimateCard([{ y: 0, opacity: 1 }]);
+          setFilterWork(recommendation.filter((review) => review.tags.includes(item)));
+        }, 500);
+      }; 
+    
 
   const closeModal = () => {
     bigURL = '';
@@ -48,28 +39,13 @@ const Reviews = () => {
   };
 
   return (
-    <div id={menuItem}>
-       <h2 className={style.head_text}>
-          {t('reviews_title')}
-       </h2>
-       <div className={style.app__work_filter}>
-        {['Recommendation','Review'].map((item, index) => (
-          <div
-            key={index}
-            onClick={() => handleReviewFilter(item)}
-            className={`${style.app__work_filter_item} ${s.app__flex} ${s.p_text}`}
-          >
-            {item}
-          </div>
-        ))}
-      </div>
-
+    <>
       <motion.div
         animate={animateCard}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className={style.app__work_portfolio}
       >
-        {reviews.map((review, index) => (
+        {recommendation.map((review, index) => (
           <div className={`${style.app__work_item} ${s.app__flex}`} key={index} >
             <div className={`${style.app__work_img} ${s.app__flex}`} >
               <img src={review.imgUrl} alt={review.name} />
@@ -93,10 +69,10 @@ const Reviews = () => {
       </motion.div>
 
       {showModal && (
-          <Modal bigURL={bigURL} bigOne={bigOne} onClose={closeModal}/>
-        )}
-    </div>
+        <Modal bigURL={bigURL} bigOne={bigOne} onClose={closeModal}/>
+       )}
+    </>
   )
 }
 
-export default Reviews
+export default Recommendation
