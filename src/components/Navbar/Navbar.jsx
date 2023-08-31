@@ -16,7 +16,7 @@ const Navbar = () => {
     <nav className={style.app__navbar}>
     
       <a href="/" className={style.app__navbar_logo}>
-    PORTFOLIO    
+        PORTFOLIO    
      </a>
      
      <LanguagesBtn />

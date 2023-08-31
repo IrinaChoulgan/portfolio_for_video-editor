@@ -7,18 +7,20 @@ import style from './Work.module.css';
 import s from '../../App.module.css';
 
 import { projects } from './Projects';
+import { filters } from './Filters';
+
 
 const Work = () => {
-  const [activeFilter, setActiveFilter] = useState('Motion templates');
+  const [activeFilter, setActiveFilter] = useState('');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [filterWork, setFilterWork] = useState(projects);
 
   const { t } = useTranslation();
 
-
   useEffect(() => {
-    setFilterWork(projects.filter((project) => project.tags === 'Motion templates'));
+    setFilterWork(projects.filter((project) => project.tags === filters[0].title));
   }, []);
+
   const handleWorkFilter = (item) => {
     setActiveFilter(item);
     setAnimateCard([{ y: 100, opacity: 0 }]);
@@ -26,10 +28,9 @@ const Work = () => {
     setTimeout(() => {
       setAnimateCard([{ y: 0, opacity: 1 }]);
 
-      if (item === 'All') {
+      if (item === filters[filters.length - 1].title) {
         setFilterWork(projects);
-      } else if (item === 'Motion templates') {
-        setFilterWork(projects.filter((project) => project.tags === 'Motion templates'))}
+      }
         else {
         setFilterWork(projects.filter((work) => work.tags.includes(item)));
       }
@@ -41,15 +42,15 @@ const Work = () => {
       {t('work_title')}
       </h2>
       <div className={style.app__work_filter}>
-        {['Motion templates','Ads and promos', 'Animated Logos', 'Corporate videos','Motion graphics', 'Social videos', 'All'].map((item, index) => (
+        {filters.map((item, index) => (
           <div
             key={index}
-            onClick={() => handleWorkFilter(item)}
+            onClick={() => handleWorkFilter(item.title)}
             className={`${style.app__work_filter_item} ${s.app__flex} ${s.p_text} ${
-              activeFilter === item ? 'item_active' : ''
+              activeFilter === item.title ? 'item_active' : ''
             }`}
           >
-            {item}
+            {item.title}
           </div>
         ))}
       </div>
