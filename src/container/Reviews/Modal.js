@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
+import { HiX } from 'react-icons/hi';
+
 import st from './Reviews.module.css'
 
 const modalRoot = document.querySelector('#modal-root');
@@ -26,6 +28,10 @@ export default function Modal({ onClose, bigURL, bigOne }) {
     }
   };
 
+  const handleIconClick =()=>{
+    onClose();
+  }
+
   const handleClick = () => {
     setShowBigURL(prevState => !prevState);
   }
@@ -33,6 +39,8 @@ export default function Modal({ onClose, bigURL, bigOne }) {
   return createPortal(
     <div className={st.overlay} onClick={overlayClickHandler}>
       <div className={st.modal}>
+      <HiX className={st.modal_close} onClick={handleIconClick}/>
+
         {showBigURL ? (
           <img src={bigURL} className={st.img} alt="recommendation"/>
         ) : (

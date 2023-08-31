@@ -8,6 +8,7 @@ import { reviews } from './Reviews.js'
 
 import style from '../Work/Work.module.css'
 import s from '../../App.module.css'
+import st from './Reviews.module.css'
 
 let bigURL = '';
 let bigOne = ''
@@ -50,7 +51,7 @@ const Reviews = () => {
        <h2 className={style.head_text}>
           {t('reviews_title')}
        </h2>
-       <div className={style.app__work_filter}>
+       <div className={`${style.app__work_filter} ${st.filters}`}>
         {['Recommendation','Review'].map((item, index) => (
           <div
             key={index}

@@ -15,6 +15,28 @@
    background-color: var(--card-color);
    padding: 30px;
    border-radius: 0.5rem;
+
+   position: relative;
+
+}
+
+
+.modal_close {
+  position: absolute;
+  fill: var(--white-color);
+  width: 25px;
+  height: 25px;
+
+  right: 8px;
+  top: 8px;
+}
+
+.modal_close:hover {
+  fill: var(--secondary-color)
+}
+
+.filters {
+  justify-content: center;
 }
 
 .img {
