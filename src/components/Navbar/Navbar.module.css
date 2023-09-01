@@ -12,6 +12,11 @@
 
 }
 
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
 .app__navbar_logo {
   text-decoration: none;
 

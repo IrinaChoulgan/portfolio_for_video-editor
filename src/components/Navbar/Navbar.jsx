@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import style from './Navbar.module.css';
 import s from '../../App.module.css';
 import LanguagesBtn from '../LanguagesBtn/LanguagesBtn';
+import Logo from '../../assets/logo.png'
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -16,7 +17,7 @@ const Navbar = () => {
     <nav className={style.app__navbar}>
     
       <a href="/" className={style.app__navbar_logo}>
-        PORTFOLIO    
+        <img src={Logo} alt='logo' className={style.logo}/>    
      </a>
      
       <ul className={style.app__navbar_links}>
