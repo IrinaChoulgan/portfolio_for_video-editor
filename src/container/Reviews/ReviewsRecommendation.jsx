@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import style from '../Work/Work.module.css';
-import s from '../../App.module.css';
-import st from './Reviews.module.css';
+
 import Review from './Review';
 import Recommendation from './Recommendation';
+
+import style from '../Work/Work.module.css';
+import s from '../../App.module.css';
 
 const ReviewsRecommendation = () => {
   const { t } = useTranslation();

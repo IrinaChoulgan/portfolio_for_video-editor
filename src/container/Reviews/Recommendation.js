@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion';
 import Modal from './Modal'
 
-import { recommendation } from './Reviews.js'
+import { recommendation } from './ReviewsData.js'
 
 import style from '../Work/Work.module.css'
 import s from '../../App.module.css'
@@ -48,7 +48,7 @@ const Recommendation = () => {
         {recommendation.map((review, index) => (
           <div className={`${style.app__work_item} ${s.app__flex}`} key={index} >
             <div className={`${style.app__work_img} ${s.app__flex}`} >
-              <img src={review.imgUrl} alt={review.name} />
+              <img src={review.imgUrl} alt={review.name} loading="lazy"/>
           
               <motion.div
                 whileHover={{ opacity: [0, 1] }}

@@ -64,7 +64,7 @@ const Work = () => {
         {filterWork.map((work, index) => (
           <div className={`${style.app__work_item} ${s.app__flex}`} key={index}>
             <a className={`${style.app__work_img} ${s.app__flex}`} href={work.link} target="_blank" rel="noreferrer">
-              <img src={work.imgUrl} alt={work.name} />
+              <img src={work.imgUrl} alt={work.name} loading="lazy"/>
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
                 transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css/skyblue';
 
-import { review } from './Reviews.js';
+import { review } from './ReviewsData.js';
 import ReviewMobile from './ReviewMobile.js'
 
 import st from './Reviews.module.css';

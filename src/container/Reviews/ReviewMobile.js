@@ -1,5 +1,5 @@
 import React from 'react';
-import { review } from './Reviews.js';
+import { review } from './ReviewsData.js';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css/skyblue';
 
