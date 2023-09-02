@@ -16,6 +16,8 @@
    padding: 30px;
    border-radius: 0.5rem;
 
+   transform: translate3d(-50%, 0, 0);
+
    position: relative;
 }
 
@@ -27,6 +29,7 @@
 
   right: 8px;
   top: 8px;
+  cursor: pointer;
 }
 
 .modal_close:hover {

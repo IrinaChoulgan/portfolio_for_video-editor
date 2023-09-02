@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import Modal from './Modal'
 
 import { recommendation } from './ReviewsData.js'
@@ -68,9 +68,11 @@ const Recommendation = () => {
         ))}
       </motion.div>
 
-      {showModal && (
-        <Modal bigURL={bigURL} bigOne={bigOne} onClose={closeModal}/>
-       )}
+      <AnimatePresence initial={false} mode='wait' onExitComplete={()=> null}>
+        {showModal && (
+          <Modal bigURL={bigURL} bigOne={bigOne} onClose={closeModal}/>
+         )}
+       </AnimatePresence>
     </>
   )
 }

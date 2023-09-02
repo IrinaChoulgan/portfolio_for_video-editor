@@ -1,0 +1,44 @@
+.modal_backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1200;
+}
+
+.modal {
+    background-color: transparent;
+    padding: 30px;
+    position: relative;
+ }
+
+ .modal_icon:hover {
+    fill: var(--secondary-color)
+  }
+
+ .modal_icon{
+   cursor: pointer;
+   position: absolute;
+   fill: var(--white-color);
+   width: 25px;
+   height: 25px;
+ 
+   right: 0px;
+   top: 0px;
+ }
+
+@media screen and (max-width: 600px) {
+  .modal_player {
+    max-width: 300px;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 950px) {
+  .modal_player  {
+    max-width: 600px;
+  }
+}

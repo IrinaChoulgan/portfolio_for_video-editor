@@ -1,23 +1,33 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
 import style from './Work.module.css';
 import s from '../../App.module.css';
+import Modal from '../../components/Modal/Modal'
 
 import { projects } from './Projects';
 import { filters } from './Filters';
 
+let linkUrl = ""
 
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState('');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [filterWork, setFilterWork] = useState(projects);
+  const [showModal, setShowModal] = useState(false)
 
   const { t } = useTranslation();
 
   const menu = t('navigation_menu', { returnObjects: true });
   const menuItem = menu[2].title
+
+  const close = ()=> setShowModal(false)
+  const open = (url) => {
+    linkUrl = url;
+    setShowModal(true)
+    console.log(linkUrl)
+  }
 
   useEffect(() => {
     setFilterWork(projects.filter((project) => project.tags === filters[0].title));
@@ -63,7 +73,9 @@ const Work = () => {
       >
         {filterWork.map((work, index) => (
           <div className={`${style.app__work_item} ${s.app__flex}`} key={index}>
-            <a className={`${style.app__work_img} ${s.app__flex}`} href={work.link} target="_blank" rel="noreferrer">
+            <div
+              className={`${style.app__work_img} ${s.app__flex}`}
+              onClick={()=> (open(work.link))}>
               <img src={work.imgUrl} alt={work.name} loading="lazy"/>
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
@@ -71,7 +83,7 @@ const Work = () => {
                 className={`${style.app__work_hover} ${s.app__flex}`}
               >
               </motion.div>
-            </a>
+            </div>
 
             <div className={`${style.app__work_content} ${s.app__flex}`}>
               <h4 className={s.bold_text}>{work.title}</h4>
@@ -83,6 +95,9 @@ const Work = () => {
           </div>
         ))}
       </motion.div>
+      <AnimatePresence initial={false} mode='wait' onExitComplete={()=> null}>
+          {showModal && <Modal handleClose={close} linkUrl={linkUrl}/>}
+      </AnimatePresence>
     </section>
   );
 };
