@@ -320,7 +320,12 @@ export const projects = [
       link: 'https://youtu.be/uu8TDV7EeIM',
       imgUrl: `${images.p_46}`,
       tags: 'Motion templates'
-  
+    },
+    {
+      name: 'video-47',
+      link: 'https://youtu.be/JIIL4LLvtPk',
+      imgUrl: `${images.p_47}`,
+      tags: 'Motion templates'
     }
   ]
   
